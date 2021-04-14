@@ -1,0 +1,199 @@
+/* Sets scrolling through the page to be smooth */
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/* Variables for colors*/
+
+:root {
+    --maroon: rgb(100, 10, 10);
+    --sandy: rgb(230, 214, 200);
+    --deepblue: rgb(46, 90, 118)
+}
+
+/* Basic Stylings, colors, and fonts for the body */
+
+body {
+    background: var(--sandy);
+    font-family: sans-serif;
+    font-size: 16px;
+}
+nav {
+    background: var(--maroon);
+    padding: 10px 15px;
+}
+a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+main > * {
+    flex-basis: 20ch;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+/* Class Stylings - Desktop Mode */
+
+.menu {
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.name {
+    order: 0;
+    flex: 1;
+    font-size: 30px;
+    padding: 7px 0px 7px 60px;
+    filter: drop-shadow(2px 2px 2px #000000);
+}
+.name label {
+    background: var(--deepblue);
+    padding: 6px 10px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.button {
+    order: 1;
+    position: relative;
+    display: block;
+    width: auto;
+    padding: 15px;
+    margin: 0 10px;
+    filter: drop-shadow(5px 5px 2px #000000);
+    transition: background .5s;
+    background: var(--deepblue);
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+/* Assigns properties to the header image to auto-resize and position */
+
+.headerimage {
+    text-align:center;
+    margin: 20px auto 0 auto;
+    padding:0px;
+    max-height: 500px;
+    max-width: 1500px;
+    filter: drop-shadow(2px 2px 2px #000000);
+}
+.headerimage img{
+    display:flex;
+    flex: 1 1 auto;
+    width: 100%;
+
+}
+
+/* Structure for the main body portions of the website - Allows for
+stylized images and paragraphs in the wrappers*/
+
+.wrapper {
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+.side {
+    flex-grow: 1;
+    flex-basis: 10rem;
+    text-align: right;
+    color: var(--maroon);
+    border-right: 5px solid var(--maroon);
+    min-width: 25px;
+    padding:10px;
+    margin: 5px;
+    font-size: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.content {
+    flex-grow: 999;
+    flex-basis: 0;
+    min-width: 60%;
+    background: var(--deepblue);
+    margin: 5px 30px;
+    filter: drop-shadow(2px 2px 2px #000000);
+    text-align: center;
+}
+.content > * {
+    padding: 10px;
+    color: white;
+}
+.content img {
+    width:40%;
+    padding: 20px;
+    transition: filter 0.3s ease-in-out;
+}
+p {
+    text-align: justify;
+}
+/* Make the subtitle position absolute and add a negative
+margin to make sure it stays on top of the image */
+
+.subtitle {
+    position: absolute;
+    margin: -60px 10px 0px 0px;
+    left: 75%;
+    flex: 1;
+    background: var(--deepblue);
+    padding: 10px;
+    filter: drop-shadow(2px 2px 2px #000000);
+    color:white;
+}
+/* Hover Properties for Buttons */
+
+.button:hover {
+    filter: drop-shadow(4px 4px 2px #000000);
+    background: rgb(24, 60, 82);
+}
+.content img:hover {
+    filter: drop-shadow(7px 7px 5px #000000);
+}
+
+/* Mobile Layout */
+
+@media screen and (max-width: 720px) {
+    .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menu li{
+        margin: 5px 50px;
+    }
+    .menu li a {
+        display: block;
+        padding: 5px;
+    }
+    .name {
+        padding: 0px 0px 20px 0px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .wrapper{
+        display: block;
+        text-align: center;
+    }
+    .content img {
+        width: 100%;
+    }
+    .side {
+        border: none;
+        width:75%;
+        margin: 10px;
+    }
+    p {
+        text-align: justify;
+    }
+}
