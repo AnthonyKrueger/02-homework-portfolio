@@ -7,9 +7,11 @@ html {
 /* Variables for colors*/
 
 :root {
-    --maroon: rgb(100, 10, 10);
-    --sandy: rgb(230, 214, 200);
-    --deepblue: rgb(46, 90, 118)
+    --maroon: #e76f51;
+    --sandy: #e9c46a;
+    --lightblue: #2a9d8f;
+    --lightblue2:#1c6960;
+    --deepblue: #e76f51;
 }
 
 /* Basic Stylings, colors, and fonts for the body */
@@ -55,7 +57,7 @@ main > * {
     filter: drop-shadow(2px 2px 2px #000000);
 }
 .name label {
-    background: var(--deepblue);
+    background: var(--lightblue);
     padding: 6px 10px;
     color: white;
     font-weight: bold;
@@ -70,7 +72,7 @@ main > * {
     margin: 0 10px;
     filter: drop-shadow(5px 5px 2px #000000);
     transition: background .5s;
-    background: var(--deepblue);
+    background: var(--lightblue);
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
@@ -110,16 +112,17 @@ stylized images and paragraphs in the wrappers*/
     padding:10px;
     margin: 5px;
     font-size: 30px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .content {
-    flex-grow: 999;
+    flex-grow: 99;
     flex-basis: 0;
     min-width: 60%;
-    background: var(--deepblue);
+    background: var(--maroon);
     margin: 5px 30px;
     filter: drop-shadow(2px 2px 2px #000000);
     text-align: center;
+
 }
 .content > * {
     padding: 10px;
@@ -129,6 +132,45 @@ stylized images and paragraphs in the wrappers*/
     width:40%;
     padding: 20px;
     transition: filter 0.3s ease-in-out;
+}
+#topbox {
+    overflow: hidden;
+    transition: filter 0.3s ease-in-out;
+}
+#topimage {
+    width:100%;
+}
+#topLabel {
+    position:absolute;
+    display: block;
+    margin: -7% 0 0 15%;
+    background: var(--lightblue);
+    padding: 2px 5px;
+    
+}
+.imgLabel {
+    position:absolute;
+    display: block;
+    margin: -10% 0 0 15%;
+    background: var(--lightblue);
+    padding: 2px 5px;
+    
+}
+.imgLabelHidden {
+    position:absolute;
+    display: none;
+    margin: -10% 0 0 15%;
+    background: var(--lightblue);
+    padding: 2px 5px;
+    
+}
+.imgLabelRight {
+    position:absolute;
+    display: block;
+    margin: -10% 0 0 55%;
+    background: var(--lightblue);
+    padding: 2px 5px;
+    
 }
 p {
     text-align: justify;
@@ -141,7 +183,7 @@ margin to make sure it stays on top of the image */
     margin: -60px 10px 0px 0px;
     left: 75%;
     flex: 1;
-    background: var(--deepblue);
+    background: var(--lightblue);
     padding: 10px;
     filter: drop-shadow(2px 2px 2px #000000);
     color:white;
@@ -150,9 +192,12 @@ margin to make sure it stays on top of the image */
 
 .button:hover {
     filter: drop-shadow(4px 4px 2px #000000);
-    background: rgb(24, 60, 82);
+    background: var(--lightblue2);
 }
-.content img:hover {
+.bottomimage:hover {
+    filter: drop-shadow(7px 7px 5px #000000);
+}
+#topbox:hover {
     filter: drop-shadow(7px 7px 5px #000000);
 }
 
@@ -186,12 +231,24 @@ margin to make sure it stays on top of the image */
         text-align: center;
     }
     .content img {
-        width: 100%;
+        width: 90%;
     }
     .side {
         border: none;
         width:75%;
         margin: 10px;
+    }
+    #topbox{
+        width: 95%;
+    }
+    #topimage {
+        width: 300%;
+    }
+    .imgLabelRight{
+        display: none;
+    }
+    .imgLabelHidden{
+        display:block;
     }
     p {
         text-align: justify;
