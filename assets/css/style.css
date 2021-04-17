@@ -125,7 +125,7 @@ stylized images and paragraphs in the wrappers*/
 
 }
 .content > * {
-    padding: 10px;
+    padding: 20px;
     color: white;
 }
 .content img {
@@ -133,6 +133,22 @@ stylized images and paragraphs in the wrappers*/
     padding: 20px;
     transition: filter 0.3s ease-in-out;
 }
+#contactme .content {
+    text-align: left;
+    font-size: 20px;
+    display:flex
+}
+#contactme .content > * {
+    margin: auto;
+    padding: 5% 5%;
+    width: 33%;
+    text-decoration: underline;
+
+}
+
+/* Defines properties to the top image in the Work section so that it may resize
+when the window is resized without skewing */
+
 #topbox {
     overflow: hidden;
     transition: filter 0.3s ease-in-out;
@@ -148,6 +164,9 @@ stylized images and paragraphs in the wrappers*/
     padding: 2px 5px;
     
 }
+
+/* Used to label items that fall on the left side of the work section */
+
 .imgLabel {
     position:absolute;
     display: block;
@@ -156,6 +175,10 @@ stylized images and paragraphs in the wrappers*/
     padding: 2px 5px;
     
 }
+
+/*  Used to label items on the right side of the work section - 
+The hidden label appears in mobile view and is hidden at larger screen size */
+
 .imgLabelHidden {
     position:absolute;
     display: none;
@@ -188,7 +211,7 @@ margin to make sure it stays on top of the image */
     filter: drop-shadow(2px 2px 2px #000000);
     color:white;
 }
-/* Hover Properties for Buttons */
+/* Hover Properties to add drop-shadows and color-changes */
 
 .button:hover {
     filter: drop-shadow(4px 4px 2px #000000);
